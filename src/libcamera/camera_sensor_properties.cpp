@@ -113,6 +113,13 @@ const CameraSensorProperties *CameraSensorProperties::get(const std::string &sen
 				 */
 			},
 		} },
+		{ "ov7251", {
+			.unitCellSize = { 1400, 1400 },
+			.testPatternModes = {
+				{ controls::draft::TestPatternModeOff, 0 },
+				{ controls::draft::TestPatternModeColorBars, 2 },
+			},
+		} },
 		{ "ov8865", {
 			.unitCellSize = { 1400, 1400 },
 			.testPatternModes = {
