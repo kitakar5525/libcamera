@@ -108,6 +108,13 @@ int IPU3PipelineTest::run()
 	for (const std::shared_ptr<Camera> &cam : cameras)
 		cout << "Found camera '" << cam->id() << "'" << endl;
 
+	/* TODO: remove this check once such limitation is gone. */
+	if (sensors_ > 2 && cameras.size() == 2) {
+		cout << "Only 2 cameras registered (" << sensors_ << " sensors"
+		     << " in total) due to the current limitation" << endl;
+		return TestPass;
+	}
+
 	if (cameras.size() != sensors_) {
 		cerr << cameras.size() << " cameras registered, but " << sensors_
 		     << " were expected" << endl;
