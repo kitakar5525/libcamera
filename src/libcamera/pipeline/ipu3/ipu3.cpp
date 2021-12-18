@@ -1122,6 +1122,11 @@ int PipelineHandlerIPU3::registerCameras()
 		if (ret)
 			continue;
 
+		if (data->properties_.get(properties::Model) == "ov8865") {
+			LOG(IPU3, Info) << "Skipping registration of ov8865";
+			continue;
+		}
+
 		/*
 		 * \todo Read delay values from the sensor itself or from a
 		 * a sensor database. For now use generic values taken from
