@@ -30,7 +30,7 @@ public:
 	static constexpr unsigned int kIFAlignHeight = 4;
 
 	static constexpr unsigned int kIFMaxCropWidth = 40;
-	static constexpr unsigned int kIFMaxCropHeight = 540;
+	static constexpr unsigned int kIFMaxCropHeight = 40;
 
 	static constexpr unsigned int kBDSAlignWidth = 2;
 	static constexpr unsigned int kBDSAlignHeight = 4;
